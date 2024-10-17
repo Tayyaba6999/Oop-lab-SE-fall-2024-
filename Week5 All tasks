@@ -1,1 +1,122 @@
+Task no 1
+Source code
+
+
+package player;
+public class Player {
+
+    String playerName; 
+    String position;   
+    public Player(String playerName, String position) {
+        this.playerName = playerName;
+        this.position = position;
+    }
+    public void displayInfo() {
+        System.out.println("Player Name: " + playerName + ", Position: " + position);
+    }
+}
+package player;
+
+public class Team {
+    String teamName; 
+    Player player1;  
+    Player player2;  
+    public Team(String teamName, Player player1, Player player2) {
+        this.teamName = teamName;
+        this.player1 = player1;
+        this.player2 = player2;
+    }
+
+    public void displayTeamInfo() {
+        System.out.println("Team: " + teamName);
+        player1.displayInfo(); 
+        player2.displayInfo(); 
+    }
+}
+package player;
+
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Player player1 = new Player("Yusra", "Forward");
+        Player player2 = new Player("Samiya", "Defender");
+        Team team = new Team("Dream Team", player1, player2);
+        team.displayTeamInfo();
+        System.out.println("\nAfter deleting the team:");
+        player1.displayInfo(); 
+        player2.displayInfo(); 
+    }
+Task no 2
+Source code
+package cpu;
+
+public class CPU {
+
+    public String brand;
+    public String capacity;
+
+    public CPU(String brand, String capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+    
+}
+package cpu;
+public class RAM {
+    public String brand;
+    public String capacity;
+
+    public RAM(String brand, String capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+    
+}
+package cpu;
+
+
+public class HardDrive {
+    public String brand;
+    public String capacity;
+
+    public HardDrive(String brand, String capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+    
+}
+package cpu;
+
+
+public class Computer {
+    public CPU cpu;
+    public RAM ram;
+    public HardDrive hardDrive;
+
+    public Computer(CPU cpu, RAM ram, HardDrive hardDrive) {
+        this.cpu = cpu;
+        this.ram = ram;
+        this.hardDrive = hardDrive;
+    }
+
+    public void displayComponents() {
+        System.out.println("CPU Brand: " + cpu.brand + ", Capacity: " + cpu.capacity);
+        System.out.println("RAM Brand: " + ram.brand + ", Capacity: " + ram.capacity);
+        System.out.println("Hard Drive Brand: " + hardDrive.brand + ", Capacity: " + hardDrive.capacity);
+    }
+    
+}
+package cpu;
+public class Main {
+     public static void main(String[] args) {
+       
+        CPU cpu = new CPU("thinkpad", "4.2 GHz");
+        RAM ram = new RAM("dell", "16 GB");
+        HardDrive hardDrive = new HardDrive("android", "1 TB");
+        Computer computer = new Computer(cpu, ram, hardDrive); 
+        computer.displayComponents(); 
+    }
+    
+}
 
