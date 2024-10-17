@@ -1,1 +1,69 @@
+Task no 1;
+Source code:
+package array;
+public class Array {
+ public static void main(String[] args) {
+ String[] cars={"Mehran","vitz","Alto",};
+ for(int i=0;i<3;i++){
+ System.out.print(cars[i]);
+ }
+}
+Task no 2;
+Source code:
+package numbers;
+public class Numbers {
+ public static void main(String[] args) {
+ int num1=2;
+ if(num1%2==0){
+ System.out.println("the Number is even");
+ }
+ else{
+ System.out.println("the Number is odd");
+ }
 
+ }
+
+}
+Task no 3;
+Source code:
+package pkgwhile.loop;
+public class WhileLoop {
+ public static void main(String[] args) {
+ int number=1;
+ while(number<=20){
+ if(number%2==0){
+ System.out.println(number);
+ }
+ number++;
+
+ }
+ Task no 4;
+Source code:
+package nested.loop;
+public class NestedLoop {
+ public static void main(String[] args) {
+ int rows = 6;
+ for(int i=0; i<rows; i++){
+ for(int j=0; j<rows; j++){
+ System.out.print("* ");
+ }
+ System.out.println();
+ }
+ }
+
+}
+Task no 5;
+Source code:
+package factoria;
+public class Factoria {
+ public static void main(String[] args) {
+ int number =6;
+ int factoria =1;
+ while(number>0){
+ factoria*=number;
+ number--;
+ }
+ System.out.println("The factoria"+ factoria);
+ }
+
+}
