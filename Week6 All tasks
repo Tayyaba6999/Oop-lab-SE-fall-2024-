@@ -1,1 +1,128 @@
+Task 1
+package movie;
+
+/**
+ *
+ * @author Riphah
+ */
+public class Movie {
+
+    /**
+     * @param args the command line arguments
+     */
+    private String title;
+    private String director;
+    private int releaseYear;
+    public void setTitle(String title){
+        this.title=title;
+    }
+    public void setDirector(String director){
+        this.director=director;
+    }
+    public void setReleaseYear(int releaseYear){
+        this.releaseYear=releaseYear;
+    }
+    public String getTitle(){
+        return title;
+    }
+    public String getDirector(){
+        return director;
+    }
+    public int getReleaseYear(){
+        return releaseYear;
+    }
+        public static void main(String[] args) {
+        // TODO code application logic here
+        Movie mov=new Movie();
+        mov.setTitle("Entertainment");
+        mov.setDirector("Ahmed");
+        mov.setReleaseYear(2004);
+        System.out.println("Title of Movie :"+mov.getTitle());
+        System.out.println("Director of Movie :"+mov.getDirector());
+        System.out.println("Releasing Year :"+mov.getReleaseYear());
+        
+    }
+    
+Task 2
+Code
+package appliance;
+
+/**
+ *
+ * @author Riphah
+ */
+public class Appliance {
+
+    /**
+     * @param args the command line arguments
+     */
+    private String brand;
+    private String model;
+    private int powerConsumption;
+
+    // Constructor
+    public Appliance(String brand, String model, int powerConsumption) {
+        this.brand = brand;
+        this.model = model;
+        this.powerConsumption = powerConsumption;
+    }
+    public void setBrand(String brand){
+        this.brand=brand;
+    }
+    public void setmodel(String model){
+        this.model=model;
+    }
+    public void setPowerConsumption(int powerConsumption){
+        this.powerConsumption=powerConsumption;
+    }
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getPowerConsumption() {
+        return powerConsumption;
+    }
+    
+    public static void main(String[] args) {
+       
+        Refrigerator fridge = new Refrigerator("Apple", "RF28R7351SG", 700, 50);
+
+        
+        fridge.setCapacity(28);
+        System.out.println("Brand: " + fridge.getBrand());
+        System.out.println("Model: " + fridge.getModel());
+        System.out.println("Power Consumption: " + fridge.getPowerConsumption() + " Watts");
+        System.out.println("Capacity: " + fridge.getCapacity() + " cubic feet");
+    }
+}
+Child class
+package appliance;
+
+/**
+ *
+ * @author Riphah
+ */
+public class Refrigerator extends Appliance {
+    private int capacity;
+
+    // Constructor
+    public Refrigerator(String brand, String model, int powerConsumption, int capacity) {
+        super(brand, model, powerConsumption);
+        this.capacity = capacity;
+    }
+
+    // Getter method for capacity
+    public int getCapacity() {
+        return capacity;
+    }
+
+    // Setter method for capacity
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+}
 
